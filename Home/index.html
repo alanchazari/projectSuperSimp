@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>QCFirst</title>
+<meta name="viewport" content="width = device-width, initial scale = 1">
+<link rel = "stylesheet" href= "style.css">
+<script src="script.js"></script>
+</head>
+<body>
+    <div class = "header">
+        <h1>QCFirst</h1>
+    </div>
+    <div class = "header-logo">
+        <p>Presented by </p>
+        <img src = "https://www.qc.cuny.edu/preview/media/images/logos-and-icons/qc-white-knockout.png" alt ="Queens-College Logo"><br>
+    </div>
+    <div class = "body">
+        <div class = "login-container">
+            <div class = "sign-in">
+                <h2>Login</h2>
+                <form>
+                    <div class = "box">
+                        <input type = "text" placeholder = "Username">  
+                    </div>
+                    <div class = "box">
+                        <input type = "password" placeholder = "Password">  
+                    </div>
+                    <div class = "options-container"> User type:
+                        <div class = "option">
+                            <select onchange = "location = this.value;">
+                                <option value = "index.html"> Student</option>
+                                <option value = "instructorsignin.html">Instructor</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class = "box">
+                        <a class = "button" href="/Dashboard/dashboard.html">Sign In</a>
+                    </div>
+                </form>
+                <p>Forgot Password? Recover Your Account</p>
+                    <div class = "box">
+                        <input type = "text" placeholder = "Enter Email">  
+                    </div>
+                    <div class = "box" >
+                        <a class = "button">Recover Account</a>
+                    </div>
+                <p>New User?</p>
+                <p><a class = "button" href="signup.html">Sign Up</a></p>
+            </div>
+            <div class = "slideshow-container">
+                <div class="slideshow" id = "show">
+                    <img src="https://flushingpost.com/wp-content/uploads/sites/12/2020/02/Queens-College.jpg" alt = "Queens-College Campus">
+                </div>
+                <div class="slideshow" id = "show">
+                    <img src="https://thumbor.forbes.com/thumbor/700x345/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5b3e159b4bbe6f459bb99886%2F0x0.jpg " alt = "Queens-College Campus">
+                </div>
+                <div class="slideshow" id = "show">
+                    <img src="https://secure-media.collegeboard.org/CollegePlanning/media/image/photo/1076_Photo.jpg" alt = "Queens-College students">
+                </div>
+                <div class="slideshow" id = "show">
+                    <img src="https://static.wixstatic.com/media/4999e9_3238e4a3df0b46e28302209c5b8bad14~mv2.jpg/v1/fill/w_740,h_482,al_c,lg_1,q_90/4999e9_3238e4a3df0b46e28302209c5b8bad14~mv2.webp" alt= "Queens-College Students ">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;      
+    var slides = document.getElementsByClassName("slideshow");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1
+    }
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000);
+}
+</script>
+</html>
